@@ -1,0 +1,11 @@
+Also this worked pretty well:
+Bash:
+sudo pvs
+sudo pvresize /dev/sda3
+df -h
+
+# expand logical volume
+sudo lvextend -r -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+
+# resize partition
+sudo growpart /dev/sda 3
